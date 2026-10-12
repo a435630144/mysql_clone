@@ -1,0 +1,5 @@
+# 统一用 LF 入库，检出时按各系统习惯转换
+* text=auto eol=lf
+
+# Shell 脚本必须保持 LF，否则 Linux 上会报 bad interpreter
+*.sh text eol=lf
