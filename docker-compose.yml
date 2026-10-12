@@ -1,0 +1,15 @@
+services:
+  mysql-clone:
+    build: .
+    container_name: mysql-clone
+    # 跑完即退，由宿主 cron 用 `docker compose run --rm mysql-clone` 拉起
+    restart: "no"
+    env_file:
+      - .env
+    environment:
+      TZ: Asia/Shanghai
+    volumes:
+      - ./dumps:/app/dumps
+      - ./logs:/app/logs
+    # 限制内存上限，避免大库导入时把小内存服务器拖垮
+    mem_limit: 512m

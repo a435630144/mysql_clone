@@ -1,0 +1,30 @@
+{
+  "name": "copy-database",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MySQL 数据库定时同步工具：增量比对、跨版本自适应、冲突自愈、邮件告警（MySQL database sync tool with incremental diff, cross-version adaptation and email alerting）",
+  "license": "MIT",
+  "keywords": [
+    "mysql",
+    "database",
+    "sync",
+    "replication",
+    "backup",
+    "clone",
+    "incremental",
+    "mysql-sync",
+    "database-migration"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "once": "node src/index.js --once",
+    "check": "node src/index.js --check"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mysql2": "^3.11.0",
+    "nodemailer": "^10.1.0"
+  }
+}

@@ -1,0 +1,19 @@
+# 依赖
+node_modules/
+
+# 本地配置（含数据库密码，绝对不要提交）
+.env
+*.local
+
+# 运行时产物
+dumps/
+logs/
+*.log
+.clone.lock
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
